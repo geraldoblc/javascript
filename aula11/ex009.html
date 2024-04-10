@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Imigração</h1>
+    País de origem: <input type="text" name="nation" id="nation">
+    <input type="button" value="Verificar" onclick="inspecionar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function inspecionar() {
+            var nat = window.document.getElementById('nation').value
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Seu país de origem é <strong>${nat}</strong>.</p>`
+            if (nat === 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro.</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro e deve se dirigir à Imigração.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
